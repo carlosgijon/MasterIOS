@@ -21,22 +21,23 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    @IBAction func saluda() {
-        if(estado == 0) {
-         mensaje.text = "Hola mundo!"
-        }
-        else if(estado == 1) {
-            mensaje.text = "Adios cansino!"
-        }
-        else {
-            mensaje.text = "Ya vale de darle al botoncito"
-        }
-        
-        estado += 1
-
+    
+    // FUNCIONES Y VARIABLES MIAS
+    @IBOutlet weak var etiqueta: UILabel!
+    @IBOutlet weak var boton: UIButton!
+    @IBOutlet weak var texto: UITextField!
+    
+    @IBAction func pulsar_boton(_ sender: UIButton) {
+        etiqueta.text = texto.text
     }
     
-    @IBOutlet weak var mensaje: UILabel!
+    @IBAction func edicion_terminada(_ sender: UITextField) {
+        texto.resignFirstResponder()
+    }
+    
+    
+    
+    
+    
 }
 
