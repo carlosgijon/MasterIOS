@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Ejercicio2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LRB-zH-GM1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W06-aV-RtA">
+                                        <rect key="frame" x="167" y="146" width="42" height="21"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Label">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" metaFont="system" size="17"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="BIN-lc-MLK">
+                                        <rect key="frame" x="18" y="317" width="339" height="31"/>
+                                        <color key="minimumTrackTintColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="maximumTrackTintColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="thumbTintColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="cambiar_valor:" destination="BYZ-38-t0r" eventType="valueChanged" id="vi8-IK-MsK"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNg-mV-Vo5">
+                                        <rect key="frame" x="109" y="97" width="158" height="21"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="El valor del Slider es">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" metaFont="system" size="17"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=":">
+                                                <attributes>
+                                                    <font key="NSFont" metaFont="system" size="17"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="DaT-Ov-7Ng">
+                                        <rect key="frame" x="20" y="478" width="335" height="29"/>
+                                        <segments>
+                                            <segment title="0-33%"/>
+                                            <segment title="33-66%"/>
+                                            <segment title="66-100%"/>
+                                        </segments>
+                                        <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="cambiar_color:" destination="BYZ-38-t0r" eventType="valueChanged" id="0vH-Is-V55"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="W06-aV-RtA" firstAttribute="top" secondItem="iNg-mV-Vo5" secondAttribute="bottom" constant="28" id="1CX-ll-EOO"/>
+                                    <constraint firstItem="W06-aV-RtA" firstAttribute="centerX" secondItem="LRB-zH-GM1" secondAttribute="centerX" id="1tG-BT-8Fs"/>
+                                    <constraint firstItem="TVS-zq-FAQ" firstAttribute="bottom" secondItem="DaT-Ov-7Ng" secondAttribute="bottom" constant="161" id="AKj-lB-qoE"/>
+                                    <constraint firstItem="BIN-lc-MLK" firstAttribute="leading" secondItem="TVS-zq-FAQ" secondAttribute="leading" constant="20" id="FWi-7F-kNR"/>
+                                    <constraint firstItem="W06-aV-RtA" firstAttribute="top" secondItem="LRB-zH-GM1" secondAttribute="top" constant="146" id="HJv-WK-KWF"/>
+                                    <constraint firstItem="DaT-Ov-7Ng" firstAttribute="leading" secondItem="TVS-zq-FAQ" secondAttribute="leading" constant="20" id="N9q-v1-tVb"/>
+                                    <constraint firstItem="TVS-zq-FAQ" firstAttribute="trailing" secondItem="BIN-lc-MLK" secondAttribute="trailing" constant="20" id="O1v-Mh-iwA"/>
+                                    <constraint firstItem="BIN-lc-MLK" firstAttribute="top" secondItem="W06-aV-RtA" secondAttribute="bottom" constant="150" id="RjU-jA-or4"/>
+                                    <constraint firstItem="iNg-mV-Vo5" firstAttribute="top" secondItem="TVS-zq-FAQ" secondAttribute="top" constant="77" id="S0Q-Tf-Kc6"/>
+                                    <constraint firstItem="iNg-mV-Vo5" firstAttribute="centerX" secondItem="LRB-zH-GM1" secondAttribute="centerX" id="XTZ-Ry-nPR"/>
+                                    <constraint firstItem="BIN-lc-MLK" firstAttribute="centerX" secondItem="LRB-zH-GM1" secondAttribute="centerX" id="aFE-7b-Nx9"/>
+                                    <constraint firstItem="TVS-zq-FAQ" firstAttribute="bottom" secondItem="BIN-lc-MLK" secondAttribute="bottom" constant="320" id="bcD-dL-WHv"/>
+                                    <constraint firstItem="W06-aV-RtA" firstAttribute="top" secondItem="iNg-mV-Vo5" secondAttribute="bottom" constant="28" id="bez-Iz-Z5A"/>
+                                    <constraint firstItem="W06-aV-RtA" firstAttribute="top" secondItem="iNg-mV-Vo5" secondAttribute="bottom" constant="28" id="cAL-dB-Zzy"/>
+                                    <constraint firstItem="DaT-Ov-7Ng" firstAttribute="centerX" secondItem="LRB-zH-GM1" secondAttribute="centerX" id="e65-gN-P3R"/>
+                                    <constraint firstItem="BIN-lc-MLK" firstAttribute="top" secondItem="W06-aV-RtA" secondAttribute="bottom" constant="150" id="g2M-pv-Ubo"/>
+                                    <constraint firstItem="DaT-Ov-7Ng" firstAttribute="top" secondItem="BIN-lc-MLK" secondAttribute="bottom" constant="131" id="nBS-Fj-iIr"/>
+                                    <constraint firstItem="TVS-zq-FAQ" firstAttribute="bottom" secondItem="BIN-lc-MLK" secondAttribute="bottom" constant="320" id="rVK-wS-I04"/>
+                                    <constraint firstItem="BIN-lc-MLK" firstAttribute="leading" secondItem="TVS-zq-FAQ" secondAttribute="leading" constant="20" id="tea-Np-tG0"/>
+                                    <constraint firstItem="TVS-zq-FAQ" firstAttribute="trailing" secondItem="DaT-Ov-7Ng" secondAttribute="trailing" constant="20" id="wp9-oL-w8S"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="TVS-zq-FAQ"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="LRB-zH-GM1" secondAttribute="trailing" id="Td6-vY-BsY"/>
+                            <constraint firstItem="LRB-zH-GM1" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="oub-DE-Mn6"/>
+                            <constraint firstItem="LRB-zH-GM1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="y8d-Fr-LCZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="segmented_porcentaje" destination="DaT-Ov-7Ng" id="VHW-lt-hDn"/>
+                        <outlet property="slider" destination="BIN-lc-MLK" id="EOF-2t-Xuw"/>
+                        <outlet property="valor_slider" destination="W06-aV-RtA" id="cRb-iO-k9M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
+        </scene>
+    </scenes>
+</document>
