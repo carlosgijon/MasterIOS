@@ -30,6 +30,40 @@ class AniadeTutorialViewController: UIViewController {
         txt_nombre_tutorial.resignFirstResponder()
     }
     
+    @IBAction func aniadirTutorial(_ sender: UIButton) {
+        // Creamos el objet
+        var tutorialInfo: tutorial = tutorial()
+        // Rellenamos sus valores
+        tutorialInfo.nombre = txt_nombre_tutorial.text!
+        
+        if(tab_sistema.selectedSegmentIndex == 0) {
+            tutorialInfo.sistema = "Android"
+        }
+        else {
+            tutorialInfo.sistema = "IOS"
+        }
+        
+        if(sw_terminado.isOn) {
+            tutorialInfo.terminado = true
+        }
+        else {
+            tutorialInfo.terminado = false
+        }
+        
+        var es_insertado = gestorDB.aniadeTutorial(tutorialInfo: tutorialInfo)
+        
+        if(es_insertado) {
+            print("INSERT OK")
+        }
+        else {
+            print("INSERT fallido")
+        }
+    }
+    
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 

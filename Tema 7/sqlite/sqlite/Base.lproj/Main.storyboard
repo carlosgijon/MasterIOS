@@ -91,6 +91,9 @@
                                 <rect key="frame" x="165" y="439" width="45" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Añadir"/>
+                                <connections>
+                                    <action selector="aniadirTutorial:" destination="tmx-HK-jYA" eventType="touchUpInside" id="ZMf-Rm-ycC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
